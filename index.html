@@ -309,6 +309,30 @@
         padding: 1.5rem 0;
         text-align: center;
     }
+
+    @media only screen and (max-width: 600px) {
+        main {
+            padding: 0 !important;
+        }
+
+        #education .box .shape {
+            width: 50%;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        #education .box .shape {
+            width: 47%;
+        }
+
+        #skills .img-content {
+            flex-direction: column;
+        }
+
+        #skills .img-content img {
+            padding: 0.5rem 1rem;
+        }
+    }
 </style>
 
 <body>
@@ -326,7 +350,7 @@
                             Resume</a>
                     </li>
                     <li class="nav-item active">
-                        <button type="button" class="nav-link btn btn-dark contact" data-bs-toggle="#"
+                        <button type="button" class="nav-link btn btn-dark contact" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             Contact Me
                         </button>
@@ -346,22 +370,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send</button>
+                    Email: hishamkhartoum@gmail.com
                 </div>
             </div>
         </div>
@@ -370,7 +379,7 @@
         <section id="hero">
             <div class="container-fluid">
                 <div class="row content">
-                    <div class="col col-sm-7">
+                    <div class="col-sm-7">
                         <div class="hero-content">
                             <h2>
                                 Hello <svg width="50" height="57" viewBox="0 0 50 57" fill="none"
@@ -390,8 +399,8 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col col-sm-5">
-                        <img class="img-fluid d-block ms-auto" src="me.jpg" alt="">
+                    <div class="col-sm-5">
+                        <img class="img-fluid d-block ms-auto  my-2" src="me.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -400,13 +409,13 @@
             <div class="container-fluid">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-lg-3 col-sm-12">
                             <h3 class="d-flex section-title">
                                 My Education
                             </h3>
                         </div>
-                        <div class="col-sm-9">
-                            <div class="row">
+                        <div class="col-lg-9 col-sm-12">
+                            <div class="row my-5">
                                 <div class="col-sm-6">
                                     <div class="box">
                                         <span class="shape"></span>
