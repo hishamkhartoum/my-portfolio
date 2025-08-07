@@ -1,495 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>Hisham Khartoum</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Hisham Khartoum Portfolio</title>
 </head>
-<style>
-    @charset "utf-8";
-
-    html,
-    body,
-    div,
-    span,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    abbr,
-    acronym,
-    address,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    q,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-weight: inherit;
-        font-style: inherit;
-        font-size: 100%;
-        font-family: inherit;
-    }
-
-    em {
-        font-style: italic;
-    }
-
-    strong {
-        font-weight: bold;
-    }
-
-    html,
-    body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        font-family: 'Merriweather Sans', sans-serif;
-        overflow-x: hidden;
-    }
-
-    /* /END RESET */
-    body {
-        font-size: 1.5rem;
-    }
-
-    p {
-        line-height: 200%;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-weight: bold;
-    }
-
-    h1 {
-        font-size: 3.5rem;
-        color: #084A83;
-    }
-
-    h2 {
-        font-size: 2rem;
-        color: #936B23;
-    }
-
-    h3 {
-        font-size: 2.25rem;
-        color: #084A83;
-        border-bottom: 0.3rem solid #936B23;
-        width: max-content;
-    }
-
-    h1 a,
-    h2 a,
-    h3 a,
-    h4 a,
-    h5 a,
-    h6 a {}
-
-    a img {
-        border: none;
-        outline: none;
-    }
-
-    a {
-        color: #363636;
-        outline: none;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: #999;
-    }
-
-    a,
-    a:active,
-    a:visited,
-    a img {
-        outline: none;
-    }
-
-    .clearfix:after {
-        content: ".";
-        display: block;
-        clear: both;
-        visibility: hidden;
-        line-height: 0;
-        height: 0;
-    }
-
-    .clearfix {
-        display: inline-block;
-    }
-
-    html[xmlns] .clearfix {
-        display: block;
-    }
-
-    * html .clearfix {
-        height: 1%;
-    }
-
-    header {
-        width: 100%;
-        height: 6rem;
-        padding: 0 6.25rem;
-    }
-
-    header .navbar-brand {
-        font-size: 1.5rem;
-        font-weight: 900;
-    }
-
-    header .navbar-brand img {
-        width: 3rem;
-        margin-right: 1rem;
-        transform: rotate(70deg);
-        display: none;
-    }
-
-    header #my-nav {
-        font-size: 1.5rem;
-    }
-
-    header #first-name {
-        color: #15476D;
-    }
-
-    header #last-name {
-        color: #936B23;
-    }
-
-    header .resume {
-        font-size: 1rem;
-        margin: 0 1rem;
-        border-radius: 4rem;
-        padding: 0.75rem 1.5rem;
-        color: white;
-        background: #936B23;
-    }
-
-    header .contact {
-        font-size: 1rem;
-        border-radius: 4rem;
-        padding: 0.75rem 1.5rem;
-        color: white;
-        background: #084A83;
-    }
-
-    main {
-        padding: 0 6.25rem;
-    }
-
-    #hero .content .hero-content {
-        margin-top: 4.5rem;
-    }
-
-    #hero .content .hero-content h2 {
-        margin-bottom: 4rem;
-    }
-
-    #hero .content .hero-content h1 {
-        margin-bottom: 4.5rem;
-    }
-
-    #hero .content .hero-content p {
-        font-weight: 700;
-        font-size: 1rem;
-    }
-
-    #hero .content img {
-        height: 39rem;
-        width: 39rem;
-        border-radius: 20rem;
-    }
-
-    #education {
-        margin-top: 6rem;
-    }
-
-    #education .box {
-        position: relative;
-        width: 90%;
-    }
-
-    #education .box .content {
-        width: 90%;
-    }
-
-    #education .box .shape {
-        width: 65%;
-        height: 11rem;
-        border: 5px solid #936B23;
-        border-left: none;
-        border-bottom: none;
-        position: absolute;
-        top: 2rem;
-        right: 0;
-    }
-
-    #education .box .ed-date {
-        color: #936B23;
-    }
-
-    #education .box p {
-        margin: 3rem 0;
-        font-size: 1.3rem;
-        font-weight: 700;
-    }
-
-    #skills .img-content {
-        flex-wrap: nowrap;
-        align-content: center;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 1rem;
-    }
-
-    #skills .img-content img {
-        padding: 2rem 1rem;
-    }
-
-    h3.text-heading {
-        width: max-content;
-        text-align: center;
-        display: block;
-        margin: auto;
-    }
-
-    h3.section-title {
-        flex-wrap: nowrap;
-    }
-
-    #skills {
-        margin: 4rem 0;
-    }
-
-    footer {
-        background-color: #1E1E1E;
-        color: white;
-        font-size: 1rem;
-        padding: 1.5rem 0;
-        text-align: center;
-    }
-
-    @media only screen and (max-width: 600px) {
-        header .navbar-brand img {
-            width: 2rem;
-        }
-
-        main {
-            padding: 0 !important;
-        }
-
-        #education .box .shape {
-            width: 50%;
-        }
-    }
-
-    @media only screen and (max-width: 800px) {
-        #education .box .shape {
-            width: 47%;
-        }
-
-        #skills .img-content {
-            flex-direction: column;
-        }
-
-        #skills .img-content img {
-            padding: 0.5rem 1rem;
-        }
-    }
-</style>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand"><img src="logo.svg" alt="Hisham Khartoum logo"><span id="first-name">Hisham</span>
-                <span id="last-name">Khartoum</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-align-justify" aria-hidden="true"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link btn btn-warning resume" href="Hisham Khartoum 11-4-2024.pdf">My
-                            Resume</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a type="button" class="btn nav-link btn btn-dark contact" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            Contact Me
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<header class="header">
+    <a href="/" class="logo">Hisham <span>Khartoum</span></a>
 
+    <a href="download" class="download-cv">Download CV</a>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Me</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Email: hishamkhartoum@gmail.com
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Hamburger button -->
+    <button class="menu-toggle" aria-label="Toggle Menu">
+      <span class="icon-bars">&#9776;</span>
+      <span class="icon-close">&times;</span>
+    </button>
+
+    <!-- Navigation menu -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#Welcome">Welcome</a></li>
+        <li><a href="#Education">My Education</a></li>
+        <li><a href="#Technologies">Technologies</a></li>
+      </ul>
+    </nav>
+  </header>
     <main>
-        <section id="hero">
-            <div class="container-fluid">
-                <div class="row content">
-                    <div class="col-sm-5">
-                        <img class="img-fluid d-block ms-auto  my-2" src="me.jpg" alt="">
+        <section class="hero" id="Welcome">
+            <div class="content" data-aos="fade-right">
+                <h1>Welcome to My Java Developer Portfolio</h1>
+                <p>My name is Hisham Elfadhel Ahmed Khartoum. 
+                    I'm a Java developer based in Portugal, specializing in building 
+                    efficient, scalable applications. Explore my work to see how I can 
+                    help turn your ideas into reality.</p>
+                <a href="" class="button">Download CV</a>
+            </div>
+            <img src="/img/my-pic.jpg" alt="Hisham photo" data-aos="fade-left">
+        </section>
+        <section class="education" id="Education">
+            <div class="head" data-aos="fade-right">
+                <p>Journey</p>
+                <h2>My Education</h2>
+                <p>Explore the milestones of my academic journey. Each 
+                    step reflects my growth and dedication.</p>
+            </div>
+            <div class="timeline" data-aos="fade-left">
+                <div class="content">
+                    <div class="timeline-progress">
+                        <div class="progress-container">
+                            <div class="divider1"></div>
+                            <div class="circle"></div>
+                            <div class="divider2"></div>
+                        </div>
                     </div>
-                    <div class="col-sm-7">
-                        <div class="hero-content">
-                            <h2>
-                                Hello <svg width="40" height="57" viewBox="0 0 50 57" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M36.4214 36.1846L35.2519 35.2452L34.5836 34.7085L33.4142 33.7691L34.3535 32.5997L46.1765 17.8803C47.1793 16.6318 46.9668 14.7966 45.7589 13.8639C44.5614 12.9391 42.8378 13.1401 41.8858 14.3253L30.0098 29.1107L29.0704 30.2802L27.901 29.3408L27.2327 28.804L26.0633 27.8647L27.0026 26.6952L41.4423 8.71807C42.4451 7.46954 42.2326 5.63442 41.0248 4.70166L36.4214 36.1846ZM36.4214 36.1846L37.3607 35.0151M36.4214 36.1846L37.3607 35.0151M37.3607 35.0151L43.2121 27.7302C44.215 26.4817 46.0528 26.2934 47.2241 27.2716C48.3854 28.2416 48.5609 29.9679 47.6088 31.1531L47.6088 31.1531M37.3607 35.0151L47.6088 31.1531M21.7195 24.3757L20.5501 23.4364L19.8818 22.8996L18.7123 21.9603L19.6517 20.7908L31.4075 6.15496C32.4104 4.90644 32.1979 3.07131 30.99 2.13856C29.7925 1.21379 28.0688 1.41473 27.1168 2.59998L11.2827 22.3131L8.39393 25.9097L8.615 21.3019L8.89129 15.5432C8.89129 15.5432 8.89129 15.5432 8.89129 15.5432C8.96497 14.0065 7.77911 12.701 6.2422 12.6272L21.7195 24.3757ZM21.7195 24.3757L22.6589 23.2063M21.7195 24.3757L22.6589 23.2063M22.6589 23.2063L37.1516 5.16309C38.1036 3.97784 39.8272 3.7769 41.0248 4.70165L22.6589 23.2063ZM47.6088 31.1531L37.5203 43.7131C36.5993 44.8597 35.5488 45.8959 34.3897 46.8011L24.6164 54.4334C23.284 55.4738 21.4109 55.461 20.093 54.4024L3.58766 41.1449C3.13969 40.7851 2.78319 40.3244 2.54728 39.8005C2.31137 39.2766 2.20274 38.7043 2.23026 38.1304L3.3262 15.2765C3.3262 15.2765 3.3262 15.2765 3.3262 15.2765M47.6088 31.1531L3.3262 15.2765M3.3262 15.2765C3.39998 13.7397 4.70543 12.5537 6.24208 12.6272L3.3262 15.2765Z"
-                                        fill="#EAC234" stroke="black" stroke-width="3" />
-                                </svg>
-
-                            </h2>
-                            <h1>
-                                I’m Hisham Elfadhel Ahmed Khartoum
-                            </h1>
-                            <p>
-                                As an experienced Full Stack Developer and Service Engineer with expertise in Linux
-                                administration and Liferay development, I have over eight years of combined experience
-                                in service engineering and software development. Originally from Sudan and currently
-                                based in Lisbon, Portugal, I offer valuable expertise to the team.
-                            </p>
+                    <div class="timeline-date">
+                        <div class="text">
+                            <div class="section-title">
+                                <h3 class="date">2024</h3>
+                                <h4 class="heading">
+                                Telecommunications and Computer Engineering
+                                </h4>
+                            </div>
+                            <div class="description">
+                                I’m currently doing my master degree at ISCTE in Portugal
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="education">
-            <div class="container-fluid">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-12">
-                            <h3 class="d-flex section-title">
-                                My Education
-                            </h3>
+                <div class="content">
+                    <div class="timeline-progress">
+                        <div class="progress-container">
+                            <div class="divider1"></div>
+                            <div class="circle"></div>
+                            <div class="divider2"></div>
                         </div>
-                        <div class="col-lg-9 col-sm-12">
-                            <div class="row my-5">
-                                <div class="col-sm-6">
-                                    <div class="box">
-                                        <span class="shape"></span>
-                                        <div class="content">
-                                            <h2 class="ed-date">Present</h2>
-                                            <p>Master of Telecommunications and Computer Engineering, ISCTE.
-                                                Lisbon,
-                                                Portugal</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="box">
-                                        <span class="shape"></span>
-                                        <div class="content">
-                                            <h2 class="ed-date">2012</h2>
-                                            <p>Bachelor of Commuications Engineering, International University of
-                                                Africa.
-                                                Khartoum,
-                                                Sudan</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="box">
-                                        <span class="shape"></span>
-                                        <div class="content">
-                                            <h2 class="ed-date">2006</h2>
-                                            <p>Alqabas Secondary School. Khartoum, Sudan</p>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="timeline-date">
+                        <div class="text">
+                            <div class="section-title">
+                                <h3 class="date">2012</h3>
+                                <h4 class="heading">
+                                Bachelor of Communications Engineering
+                                </h4>
+                            </div>
+                            <div class="description">
+                                I graduated from the International University of Africa(IUA).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="timeline-progress">
+                        <div class="progress-container">
+                            <div class="divider1"></div>
+                            <div class="circle"></div>
+                            <div class="divider2"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-date">
+                        <div class="text">
+                            <div class="section-title">
+                                <h3 class="date">2005</h3>
+                                <h4 class="heading">High School Diploma</h4>
+                            </div>
+                            <div class="description">
+                                I graduated from high school in Sudan
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="skills">
-            <div class="container-fluid">
-                <div class="row">
-                    <h3 class="text-heading">Skills</h3>
-                    <div class="img-content d-flex">
-                        <img src="java.svg" alt=java">
-                        <img src="angular.svg" alt="angular">
-                        <img src="liferay.svg" alt="liferay">
-                        <img src="linux.svg" alt="linux">
-                        <img src="assembly x86.png" alt="">
+        <section class="technologies" id="Technologies">
+            <div class="head" data-aos="fade-up">
+                <p class="lead">Technologies</p>
+                <h2>Explore the Technologies I Work With</h2>
+                <p>As a Java developer, I leverage a variety of 
+                    technologies to create efficient and scalable 
+                    applications. My toolkit includes modern frameworks 
+                    and tools that enhance productivity and code quality.</p>
+            </div>
+            <div class="list-tech" data-aos="fade-up">
+                <div class="content">
+                    <div class="icon">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.28931 37.1642C3.34431 37.1642 2.54031 36.8327 1.87731 36.1697C1.21431 35.5067 0.882812 34.7027 0.882812 33.7577V7.1152C0.882812 6.74853 0.947146 6.40153 1.07581 6.0742C1.20448 5.7472 1.39748 5.44303 1.65481 5.1617L4.50481 1.4737C4.74381 1.16736 5.02248 0.937531 5.34081 0.784198C5.65948 0.630865 6.00648 0.554199 6.38181 0.554199H32.0318C32.4075 0.554199 32.7545 0.632864 33.0728 0.790198C33.3911 0.947531 33.6738 1.17536 33.9208 1.4737L36.7708 5.1617C36.9615 5.4567 37.1295 5.76436 37.2748 6.0847C37.4201 6.40536 37.4928 6.74886 37.4928 7.1152V33.7577C37.4928 34.7027 37.1601 35.5067 36.4948 36.1697C35.8295 36.8327 35.0226 37.1642 34.0743 37.1642H4.28931ZM5.08181 6.2227H33.3318L31.5113 3.9727H6.88181L5.08181 6.2227ZM4.28931 33.7577H34.0743V9.2227H4.28931V33.7577ZM27.1338 21.5152L23.6338 25.0152C23.3591 25.2935 23.2218 25.6297 23.2218 26.0237C23.2218 26.418 23.3571 26.7485 23.6278 27.0152C23.8985 27.2819 24.229 27.4152 24.6193 27.4152C25.0096 27.4152 25.3478 27.2819 25.6338 27.0152L29.9283 22.7207C30.2683 22.375 30.4383 21.9717 30.4383 21.5107C30.4383 21.05 30.2683 20.6497 29.9283 20.3097L25.6338 16.0152C25.3478 15.7485 25.0091 15.6152 24.6178 15.6152C24.2265 15.6152 23.8985 15.7485 23.6338 16.0152C23.3591 16.2819 23.2218 16.6124 23.2218 17.0067C23.2218 17.4007 23.3591 17.7369 23.6338 18.0152L27.1338 21.5152ZM11.2418 21.7152L14.7418 18.2152C15.0085 17.9369 15.1418 17.6007 15.1418 17.2067C15.1418 16.8124 15.0085 16.4819 14.7418 16.2152C14.4671 15.9485 14.1341 15.8152 13.7428 15.8152C13.3515 15.8152 13.0178 15.9485 12.7418 16.2152L8.43531 20.5097C8.09531 20.8554 7.92531 21.2587 7.92531 21.7197C7.92531 22.1804 8.09531 22.5807 8.43531 22.9207L12.7418 27.2152C13.0178 27.4819 13.3515 27.6152 13.7428 27.6152C14.1341 27.6152 14.4671 27.4819 14.7418 27.2152C15.0085 26.9485 15.1418 26.618 15.1418 26.2237C15.1418 25.8297 15.0085 25.4935 14.7418 25.2152L11.2418 21.7152Z" fill="black"/>
+                        </svg>
                     </div>
+                    <h4 class="tech-title">Java and Frameworks I Utilize</h4>
+                    <p>I specialize in Java, Spring, and Hibernate.</p>
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <svg width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.67829 12.9369C1.22629 12.9369 0.84196 12.7776 0.525293 12.4589C0.208626 12.1399 0.050293 11.7526 0.050293 11.2969V9.12545C0.050293 8.75378 0.18396 8.45078 0.451293 8.21644C0.718293 7.98244 1.04446 7.86545 1.42979 7.86545C1.76246 7.86545 2.03763 7.97428 2.25529 8.19194C2.47296 8.40961 2.58179 8.68478 2.58179 9.01745V10.3339H6.71029V2.06544C6.71029 1.69811 6.83029 1.39428 7.07029 1.15395C7.31029 0.913946 7.61379 0.793945 7.9808 0.793945C8.3478 0.793945 8.65163 0.913946 8.89229 1.15395C9.13296 1.39428 9.25329 1.69811 9.25329 2.06544V11.2969C9.25329 11.7526 9.09396 12.1399 8.77529 12.4589C8.45629 12.7776 8.06896 12.9369 7.61329 12.9369H1.67829ZM13.8818 12.9369C13.3731 12.9369 12.9506 12.7689 12.6143 12.4329C12.2783 12.0966 12.1103 11.6741 12.1103 11.1654V9.99395C12.1103 9.69295 12.223 9.42961 12.4483 9.20394C12.674 8.97828 12.9373 8.86545 13.2383 8.86545H13.5253C13.8263 8.86545 14.0896 8.97828 14.3153 9.20394C14.5406 9.42961 14.6533 9.69295 14.6533 9.99395V10.3939H19.7103V7.81545H13.8853C13.3743 7.81545 12.9506 7.64728 12.6143 7.31095C12.2783 6.97495 12.1103 6.55111 12.1103 6.03945V2.56995C12.1103 2.05828 12.2783 1.63428 12.6143 1.29795C12.9506 0.961946 13.3731 0.793945 13.8818 0.793945H20.4818C20.9905 0.793945 21.413 0.961946 21.7493 1.29795C22.0853 1.63428 22.2533 2.05678 22.2533 2.56544V3.73694C22.2533 4.03794 22.1406 4.30128 21.9153 4.52694C21.6896 4.75261 21.4263 4.86545 21.1253 4.86545H20.8383C20.5373 4.86545 20.274 4.75261 20.0483 4.52694C19.823 4.30128 19.7103 4.03794 19.7103 3.73694V3.33694H14.6533V5.91545H20.4783C20.9893 5.91545 21.413 6.08361 21.7493 6.41994C22.0853 6.75594 22.2533 7.17978 22.2533 7.69144V11.1609C22.2533 11.6726 22.0853 12.0966 21.7493 12.4329C21.413 12.7689 20.9905 12.9369 20.4818 12.9369H13.8818Z" fill="black"/>
+                        </svg>
+
+                    </div>
+                    <h4 class="tech-title">Front-End Technologies I Embrace</h4>
+                    <p>I work with HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.1873 37.1642C14.0626 37.1642 9.73081 36.3612 6.19181 34.7552C2.65248 33.1495 0.882812 31.1862 0.882812 28.8652V8.8652C0.882812 6.57986 2.66915 4.62336 6.24181 2.9957C9.81415 1.36803 14.1266 0.554199 19.1793 0.554199C24.224 0.554199 28.5373 1.36803 32.1193 2.9957C35.7016 4.62336 37.4928 6.57986 37.4928 8.8652V28.8652C37.4928 31.1862 35.721 33.1495 32.1773 34.7552C28.634 36.3612 24.304 37.1642 19.1873 37.1642ZM19.1818 12.4532C22.0431 12.4532 24.9755 12.0135 27.9788 11.1342C30.9821 10.2549 32.9291 9.2652 33.8198 8.1652C32.8958 7.09853 30.9275 6.1172 27.9148 5.2212C24.9021 4.3252 21.9891 3.8772 19.1758 3.8772C16.2625 3.8772 13.3245 4.31053 10.3618 5.1772C7.39915 6.04386 5.44715 7.03986 4.50581 8.1652C5.44715 9.33186 7.37981 10.3382 10.3038 11.1842C13.2278 12.0302 16.1871 12.4532 19.1818 12.4532ZM19.1318 23.1412C20.5238 23.1412 21.9143 23.0642 23.3033 22.9102C24.6926 22.7562 26.0256 22.5272 27.3023 22.2232C28.579 21.9192 29.8035 21.5465 30.9758 21.1052C32.1478 20.6642 33.2125 20.173 34.1698 19.6317V12.2762C33.1871 12.8095 32.1105 13.2929 30.9398 13.7262C29.7691 14.1595 28.5378 14.5242 27.2458 14.8202C25.9538 15.1162 24.6285 15.3455 23.2698 15.5082C21.9111 15.6709 20.5303 15.7522 19.1273 15.7522C17.7406 15.7522 16.3518 15.6709 14.9608 15.5082C13.5701 15.3455 12.234 15.1142 10.9523 14.8142C9.67065 14.5142 8.45281 14.1495 7.29881 13.7202C6.14481 13.2909 5.11381 12.8095 4.20581 12.2762V19.6317C5.10581 20.173 6.12648 20.6622 7.26781 21.0992C8.40915 21.5365 9.62148 21.9092 10.9048 22.2172C12.1881 22.5252 13.5263 22.7562 14.9193 22.9102C16.3126 23.0642 17.7168 23.1412 19.1318 23.1412ZM19.1818 33.8412C20.7658 33.8492 22.3998 33.7135 24.0838 33.4342C25.7681 33.1549 27.3186 32.7839 28.7353 32.3212C30.152 31.8585 31.3558 31.3419 32.3468 30.7712C33.3381 30.2005 33.9458 29.6152 34.1698 29.0152V23.0282C33.2205 23.5695 32.1645 24.0525 31.0018 24.4772C29.8391 24.9019 28.6155 25.2642 27.3308 25.5642C26.0458 25.8642 24.7148 26.0892 23.3378 26.2392C21.9608 26.3892 20.5588 26.4642 19.1318 26.4642C17.7088 26.4642 16.3008 26.3872 14.9078 26.2332C13.5145 26.0792 12.1781 25.8522 10.8988 25.5522C9.61948 25.2522 8.41115 24.8899 7.27381 24.4652C6.13648 24.0405 5.11381 23.5615 4.20581 23.0282V29.0647C4.39648 29.6317 4.97898 30.2049 5.95331 30.7842C6.92798 31.3635 8.12998 31.8782 9.55931 32.3282C10.9886 32.7782 12.5455 33.1429 14.2298 33.4222C15.9138 33.7015 17.5645 33.8412 19.1818 33.8412Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <h4 class="tech-title">Database Technologies I Prefer</h4>
+                    <p>My experience includes Oracle DB, MangoDB, 
+                        MySQL and PostgreSQL.</p>
                 </div>
             </div>
-
         </section>
     </main>
-    <footer class="text-center">
-        <p>Copyright © 2023 Hisham Khartoum. All rights reserved.</p>
+    <footer>
+        <a href="/" class="logo">Hisham <span>Khartoum</span></a>
+        <hr>
+        <div class="footer-content">
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/hisham-khartoum-15a13357/">
+                    <img src="/img/icons/linkedin.png" alt="My LinkedIn page">
+                </a>
+                <a href="https://github.com/hishamkhartoum">
+                    <img src="/img/icons/github-sign.png" alt="My Github account">
+                </a>
+            </div>
+            <p>© 2025 Husham Khartoum. All rights reserved.</p>
+        </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/script.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>
-
 </html>
